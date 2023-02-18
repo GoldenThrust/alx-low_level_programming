@@ -13,14 +13,17 @@ int main(void)
 	{
 		for (num2 = 0; num2 <= 9; num2++)
 		{
-			putchar(num + '0');
-			putchar(num2 + '0');
+			if (num != num2 && num < num2)
+			{
+				putchar(num + '0');
+				putchar(num2 + '0');
 
-			if (num == 9 && num2 == 9)
-				continue;
+				if (num == 8 && num2 == 9)
+					continue;
 
-			putchar(',');
-			putchar(' ');
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
