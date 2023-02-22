@@ -1,6 +1,7 @@
 #include "main.h"
 
-/**n - Function that prints 10x alphabet,
+/**
+ * n - Function that prints 10x alphabet,
  * in lowercase
  */
 
