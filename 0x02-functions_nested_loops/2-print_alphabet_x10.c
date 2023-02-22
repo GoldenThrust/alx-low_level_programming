@@ -1,0 +1,19 @@
+#include "main.h"
+
+/**
+ * print_alphabet_x10 - Function that prints 10x alphabet,
+ * in lowercase
+ */
+
+void print_alphabet_x10(void)
+{
+	int j, i;
+
+	for (j = 0; j <= 9; j++)
+	{
+		for (i = 'a'; ch <= 'z'; i++)
+			_putchar(i);
+		_putchar('\n');
+	}
+}
+
