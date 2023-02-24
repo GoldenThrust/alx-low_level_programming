@@ -3,13 +3,13 @@
 /**
  * main - finds and prints the first 98 Fibonacci numbers,
  * starting with 1 and 2
- * followed by a new line.
+ * followed by a new linei.
  * Return: Always 0 (success)
 */
 
 int main(void)
 {
-	unsigned long int a, b, c, b1, b2, c1, c2;
+	unsigned long int a, b, c, d, e, f, g;
 
 	b = 1;
 	c = 2;
@@ -22,21 +22,20 @@ int main(void)
 		c = c + b;
 		b = c - b;
 	}
-	b1 = b / 1000000000;
-	b2 = b % 1000000000;
-	c1 = c / 1000000000;
-	c2 = c % 1000000000;
+	d = b / 1000000000;
+	e = b % 1000000000;
+	f = c / 1000000000;
+	g = c % 1000000000;
 
 	for (a = 92; a < 99; ++a)
 	{
-		printf(", %lu", c1 + (c2 / 1000000000));
-		printf("%lu", c2 % 1000000000);
-		c1 = c1 + b1;
-		b1 = c1 - b1;
-		c2 = c2 + b2;
-		b2 = c2 - b2;
+		printf(", %lu", f + (g / 1000000000));
+		printf("%lu", g % 1000000000);
+		f = f + d;
+		d = f - d;
+		g = g + e;
+		e = g - e;
 	}
 	printf("\n");
 	return (0);
 }
-

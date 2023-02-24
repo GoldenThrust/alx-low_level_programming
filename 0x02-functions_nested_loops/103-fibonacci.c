@@ -1,33 +1,32 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Description: Prints the sum of even-valued
- *		Fibonacci sequence not exceed
+ * main - Prints the sum of even-valued
+ *		Fibonicci sequence not exceed
  *		4million
  *
- * Return: Always 0 (Success)
+ * Return: Alwiys 0 (Success)
 */
+
 
 int main(void)
 {
-	int a;
-	unsigned long int b, c, d, sum;
+	int i;
+	unsigned long int a, b, c, sum;
 
-	b = 1;
-	c = 2;
+	a = 1;
+	b = 2;
 	sum = 0;
 
-	for (a = 1; a <= 89; ++a)
+	for (i = 1; i <= 89; i++)
 	{
-		if (b < 4000000 && (b % 2) == 0)
+		if (a < 4000000 && (a % 2) == 0)
 		{
-			sum = sum + b;
+			sum = sum + a;
 		}
-		d = b + c;
+		c = a + b;
+		a = b;
 		b = c;
-		c = d;
 	}
 	printf("%lu\n", sum);
 	return (0);
