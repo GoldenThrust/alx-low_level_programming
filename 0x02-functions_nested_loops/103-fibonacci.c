@@ -3,7 +3,7 @@
 /**
  * main - Prints the sum of even-valued
  *		Fibonicci sequence not exceed
- *		4million
+ *		4 million
  *
  * Return: Alwiys 0 (Success)
 */
