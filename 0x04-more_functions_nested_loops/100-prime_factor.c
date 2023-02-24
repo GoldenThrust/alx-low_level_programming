@@ -6,18 +6,19 @@
 
 int main(void)
 {
-        long long int a, i;
+	long int a, i;
 
-        a = 612852475143;
+	a = 612852475143;
 
-        for (i = 2; i <= a; i++)
-        {
-                if (a % i == 0)
-                {
-                        a /= i;
-                        i--;
-                }
-        }
-        printf("%lld\n", i);
-        return (0);
+	for (i = 2; i <= a; i++)
+	{
+		if (a % i == 0)
+		{
+			a = a / i;
+			i--;
+		}
+	}
+	printf("%ld\n", i);
+	return (0);
 }
+
