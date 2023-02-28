@@ -19,7 +19,6 @@ void rev_string(char *s)
 		k = s[i];
 
 		s[i] = s[j - i - 1];
-		putchar((j - i - 1) + '0');
 		s[j - 1 - i] = k;
 	}
 }
