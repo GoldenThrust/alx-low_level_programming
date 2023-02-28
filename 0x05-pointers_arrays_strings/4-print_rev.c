@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts - print string follow by a new line.
+ * print_rev - print a string in reverse.
  * @str: string to print.
  *
  */
