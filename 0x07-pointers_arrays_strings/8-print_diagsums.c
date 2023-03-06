@@ -9,23 +9,24 @@
  * @a: input pointer
  * @size: size of the matrix
  *
- * Return: nothing
 */
-
 void print_diagsums(int *a, int size)
 {
-	int i, S1, S2;
+	int index, sum1 = 0, sum2 = 0;
 
-	S1 = 0;
-	S2 = 0;
-
-	for (i = 0; i < (size * size); i++)
+	for (index = 0; index < size; index++)
 	{
-		if (i % (size + 1) == 0)
-			S1 += a[i];
-		if (i % (size - 1) == 0 && i != 0 && i < size * size - 1)
-			S2 += a[i];
+		sum1 += a[index];
+		a += size;
 	}
-	printf("%d, %d\n", S1, S2);
-}
 
+	a -= size;
+
+	for (index = 0; index < size; index++)
+	{
+		sum2 += a[index];
+		a -= size;
+	}
+
+	printf("%d, %d\n", sum1, sum2);
+}
