@@ -1,11 +1,13 @@
 #include "main.h"
 
 /**
- * _strlen_rcursion - returns 1 if a string is a 
+ * _strlen_recursion - returns 1 if a string is a
  * palindrome and 0 if not.
  * @s: pointer to string params
+ * @l: position
  * Return: recursion
  */
+int p1(char *s, int l);
 
 int _strlen_recursion(char *s)
 {
