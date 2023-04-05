@@ -8,39 +8,30 @@
  * Return: address of the node where the loop starts, or
  * NULL if there is no loop
  */
-
-size_t free_listint_safe(listint_t **h)
+listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *cur, *temp;
-
-	size_t count = 0;
-
-	if (!h || !(*h))
-		return (0);
-
-	cur = *h;
-
-	*h = NULL;
-
-	while (cur)
+	listint_t *first_h = head, *second_h = head;
+	
+	while (second_h && second_h->next)
 	{
-		count++;
+		first_h = first_h->next;
 
-		if (cur->next >= current)
+		second_h = second_h->next->next;
+
+		if (first_h == second_h)
 		{
-			temp = cur;
-			
-			cur = cur->next;
-			
-			free(temp);
-		}
-		else
-		{
-			free(cur);
-			
-			break;
+			first_h = head;
+
+			while (first_h != second_h)
+			{
+				first_h = first_h->next;
+
+				second_h = second_h->next;
+			}
+
+			return (first_h);
 		}
 	}
 	
-	return (count);
+	return (NULL);
 }

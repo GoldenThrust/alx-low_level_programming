@@ -24,7 +24,7 @@ size_t free_listint_safe(listint_t **h)
 	while (cur != NULL)
 	{
 		count++;
-		
+
 		temp = cur;
 
 		cur = cur->next;
@@ -37,7 +37,7 @@ size_t free_listint_safe(listint_t **h)
 		{
 
 			temp->next = NULL;
-			
+
 			break;
 		}
 	}
