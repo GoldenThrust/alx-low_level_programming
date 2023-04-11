@@ -7,6 +7,7 @@
  *
  * Return: 0 on success, 98 on failure
  */
+
 int main(int argc, char **argv)
 {
     int fd;
@@ -98,5 +99,5 @@ int main(int argc, char **argv)
 
     close(fd);
 
-    return (EXIT_SUCCESS);
+    return (0);
 }
