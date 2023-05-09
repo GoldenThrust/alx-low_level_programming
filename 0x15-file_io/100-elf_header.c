@@ -20,6 +20,7 @@ int main(int __attribute__((__unused__)) argc, char **argv)
 {
 	int fd;
 	Elf64_Ehdr *header;
+	header = malloc(sizeof(Elf64_Ehdr));
 
 	if (argc != 2)
 	{
@@ -33,7 +34,6 @@ int main(int __attribute__((__unused__)) argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Unable to read file '%s'.\n", argv[1]);
 		return (98);
 	}
-	header = malloc(sizeof(Elf64_Ehdr));
 	if (read(fd, header, sizeof(Elf64_Ehdr)) != sizeof(Elf64_Ehdr))
 	{
 		dprintf(STDERR_FILENO, "Error: Unable to read ELF header.\n");
