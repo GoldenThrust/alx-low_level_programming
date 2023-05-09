@@ -1,6 +1,7 @@
 #include "main.h"
 
 void checker(Elf64_Ehdr *header);
+void magical(Elf64_Ehdr *header);
 void elf_class(Elf64_Ehdr *header);
 void elf_data(Elf64_Ehdr *header);
 void elf_version(Elf64_Ehdr *header);
@@ -42,6 +43,7 @@ int main(int __attribute__((__unused__)) argc, char **argv)
 
 	checker(header);
 	printf("ELF Header:\n");
+	magical(header);
 	elf_class(header);
 	elf_data(header);
 	elf_version(header);
