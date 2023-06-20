@@ -19,7 +19,7 @@ unsigned int _strspn(char *s, char *accept)
 
 		while (*accept)
 		{
-			if(*s == *accept)
+			if (*s == *accept)
 			{
 				i++;
 				match =  1;
@@ -37,4 +37,3 @@ unsigned int _strspn(char *s, char *accept)
 	return (i);
 }
 
-	
