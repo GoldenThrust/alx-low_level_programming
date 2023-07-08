@@ -19,7 +19,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	new_hash = ht->array[index];
 
-	while (new_hash && !(strcmp(new_hash->key, key)))
+	while (new_hash && strcmp(new_hash->key, key) != 0)
 		new_hash = new_hash->next;
 
 	return ((new_hash != NULL) ? new_hash->value : NULL);
